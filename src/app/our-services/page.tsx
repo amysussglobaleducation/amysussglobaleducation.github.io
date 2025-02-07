@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://your-website-url.com/your-image.jpg", // Replace with your image URL
-        alt: "Amysuss Global Education Logo",
+        alt: title,
       },
     ],
   }

@@ -1,7 +1,7 @@
 "use client"; // Important for Next.js 13+ client components
 import { useState } from "react";
-import { usePathname } from 'next/navigation'
-import Link from 'next/link'
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const Navigation = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -10,7 +10,12 @@ const Navigation = () => {
     setIsMobileNavOpen(!isMobileNavOpen);
   };
   return (
-    <header id="header" className={`header d-flex align-items-center sticky-top ${isMobileNavOpen ? 'mobile-nav-active' : ''}`}>
+    <header
+      id="header"
+      className={`header d-flex align-items-center sticky-top ${
+        isMobileNavOpen ? "mobile-nav-active" : ""
+      }`}
+    >
       <div className="container-fluid container-xl position-relative d-flex align-items-center">
         <Link href="/" className="logo d-flex align-items-center me-auto">
           <img src="/assets/img/logo.png" alt="Amysuss Global Education" />
@@ -20,30 +25,65 @@ const Navigation = () => {
         <nav id="navmenu" className="navmenu">
           <ul>
             <li>
-              <Link href="/" className={pathname=="/"?"active":""}>
+              <Link href="/" className={pathname == "/" ? "active" : ""}>
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/our-services" className={pathname=="/our-services"?"active":""}>Our Services</Link>
+              <Link
+                href="/our-services/"
+                className={pathname == "/our-services/" ? "active" : ""}
+              >
+                Our Services
+              </Link>
             </li>
             <li>
-              <Link href="/study-abroad">Study Abroad</Link>
+              <Link
+                href="/study-abroad/"
+                className={pathname == "/study-abroad/" ? "active" : ""}
+              >
+                Study Abroad
+              </Link>
             </li>
             <li>
-              <Link href="">Psychometric Test</Link>
+              <Link
+                href="/psychometric-test/"
+                className={pathname == "/psychometric-test/" ? "active" : ""}
+              >
+                Psychometric Test
+              </Link>
             </li>
             <li>
-              <Link href="/why-us" className={pathname=="/why-us"?"active":""}>Why US</Link>
+              <Link
+                href="/why-us/"
+                className={pathname == "/why-us/" ? "active" : ""}
+              >
+                Why US
+              </Link>
             </li>
             <li>
-              <Link href="">For Schools</Link>
+              <Link
+                href="/for-schools/"
+                className={pathname == "/for-schools/" ? "active" : ""}
+              >
+                For Schools
+              </Link>
             </li>
             <li>
-              <Link href="">Media</Link>
+              <Link
+                href="/media/"
+                className={pathname == "/media/" ? "active" : ""}
+              >
+                Media
+              </Link>
             </li>
             <li>
-              <Link href="">Contact Us</Link>
+              <Link
+                href="/contact-us/"
+                className={pathname == "/contact-us/" ? "active" : ""}
+              >
+                Contact Us
+              </Link>
             </li>
           </ul>
           <i

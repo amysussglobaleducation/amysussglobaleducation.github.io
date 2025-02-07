@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-const title = "Amysuss Global Education";
-import Link from "next/link";
+const title = "Amysuss Global Education: Psychometric Test";
 const description="Amysuss Education is founded by Mr. Ashutosh Srivastava, a seasoned professional with over 20 years of rich experience spanning financial services and the education sector. An MBA in Finance and Marketing, Ashutosh has been associated with renowned organizations such as Bajaj Allianz, Bergurrean Education, Safeducate, and CII MCC."
 export const metadata: Metadata = {
   title: title,
@@ -9,8 +8,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: title, 
     description: description,
-    url: "https://www.amysussglobaleducation.com", // Replace with your actual URL
-    siteName: "Amysuss Global Education",
+    url: "https://www.amysussglobaleducation.com/psychometric-test/", // Replace with your actual URL
+    siteName: title,
     images: [
       {
         url: "https://your-website-url.com/your-image.jpg", // Replace with your image URL
@@ -29,20 +28,11 @@ export default function Home() {
 
       <div className="row ">
 
-        <div className="col content">
-        <h1>Career counselling & mentoring for top 100 colleges worldwide</h1>
-        <Link href="/contact-us" className=" btn btn-primary">Start Now</Link>
+        <div className="col">
+        <h1>Psychometric Test</h1>
         </div>
-        <div className="col content">
-          
-        <img src="/your_door_to_top_100_universities.jpeg" alt="Career counselling & mentoring for top 100 colleges worldwide"/>
-        </div>
-
       </div>
-      
-
     </div>
-
   </section>
 </main>
   );

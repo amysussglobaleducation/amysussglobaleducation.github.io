@@ -35,8 +35,7 @@ export default function RootLayout({
 }>) {
   return (    
     <html lang="en">
-      <body className={`index-page ${openSans.variable} ${poppins.variable} ${raleway.variable}`}
-      >
+      <body className={`index-page ${openSans.variable} ${poppins.variable} ${raleway.variable}`}>
         <Navigation/>
         {children}
         <Footer/>
