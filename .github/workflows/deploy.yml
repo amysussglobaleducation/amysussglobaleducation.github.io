@@ -29,7 +29,7 @@ jobs:
       - name: Create .nojekyll file
         run: touch ./out/.nojekyll
       - name: List
-        run: ls --ll ./out/_next/
+        run: ls -ll ./out/_next/static/css/
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3  # Updated from v1 to v3
