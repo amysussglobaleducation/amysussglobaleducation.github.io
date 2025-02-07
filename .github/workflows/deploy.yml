@@ -16,7 +16,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0 # Important: Fetch all history for proper cleanup
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -34,18 +34,15 @@ jobs:
 
       - name: Prepare deployment
         run: |
-          # Create clean deployment directory
           mkdir -p deployment
-          # Copy only necessary files
           cp -r out/* deployment/
-          
-          # Create .nojekyll
           touch deployment/.nojekyll
+          rm -f deployment/*.txt
 
-      - name: List deployment files
+      - name: Configure Git
         run: |
-          echo "Files to be deployed:"
-          ls -la deployment/
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
 
       - name: Clean gh-pages branch
         run: |
@@ -68,7 +65,7 @@ jobs:
 
       - name: Verify deployment
         run: |
-          echo "Verifying deployment..."
+          git fetch
           git checkout gh-pages
           echo "Files in gh-pages branch:"
           ls -la
