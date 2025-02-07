@@ -29,11 +29,11 @@ export default function Home() {
 
       <div className="row ">
 
-        <div className="col content">
+        <div className="col p-3">
         <h1>Career counselling & mentoring for top 100 colleges worldwide</h1>
         <Link href="/contact-us" className=" btn btn-primary">Start Now</Link>
         </div>
-        <div className="col content">
+        <div className="col">
           
         <img src="/your_door_to_top_100_universities.jpeg" alt="Career counselling & mentoring for top 100 colleges worldwide"/>
         </div>
