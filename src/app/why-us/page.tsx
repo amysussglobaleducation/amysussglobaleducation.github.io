@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-const title = "Amysuss Global Education";
+const title = "Amysuss Global Education : Why Us";
 const description="Amysuss Education is founded by Mr. Ashutosh Srivastava, a seasoned professional with over 20 years of rich experience spanning financial services and the education sector. An MBA in Finance and Marketing, Ashutosh has been associated with renowned organizations such as Bajaj Allianz, Bergurrean Education, Safeducate, and CII MCC."
+
 export const metadata: Metadata = {
   title: title,
   description: description,
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: title, 
     description: description,
-    url: "https://www.amysussglobaleducation.com", // Replace with your actual URL
+    url: "https://www.amysussglobaleducation.com/why-us", // Replace with your actual URL
     siteName: "Amysuss Global Education",
     images: [
       {
@@ -18,27 +19,33 @@ export const metadata: Metadata = {
     ],
   }
 };
-export default function Home() {
+export default function WhyUs() {
   return (
     <main className="main">
  
-  <section id="about" className="about section">
+  <section >
 
     <div className="container">
 
       <div className="row ">
+      <h1>Why Us</h1>
+        <div className="col content">
+          <p>Amysuss Education is founded by <strong>Ashutosh Srivastava</strong>, a
+            seasoned professional with over 20 years of rich experience spanning financial services and the education sector. An MBA in Finance and Marketing, Ashutosh has been associated with renowned organizations such as <strong>Bajaj Allianz, Bergurrean Education, Safeducate, and CII MCC</strong>.
+          </p>
+          <p>
+            With a passion for guiding and mentoring, he has successfully counselled and trained over <strong>20,000
+              individuals</strong> — ranging from students to seasoned professionals. Ashutosh brings a unique blend
+            of
+            corporate expertise and educational insight, ensuring that every student receives personalized guidance
+            tailored to their aspirations. At Amysuss Education, Ashutosh is committed to empowering students to
+            achieve their academic and professional goals with honesty, clarity, and a results-driven approach.
+          </p>
 
-        <div className="col content">
-        <h1>Career counselling & mentoring for top 100 colleges worldwide</h1>
-        </div>
-        <div className="col content">
-          
-        <img src="your_door_to_top_100_universities.jpeg" alt="Career counselling & mentoring for top 100 colleges worldwide"/>
         </div>
 
       </div>
       
-
     </div>
 
   </section>
