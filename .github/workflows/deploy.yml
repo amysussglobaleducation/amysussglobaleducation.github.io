@@ -3,8 +3,7 @@ name: Deploy Next.js to GitHub Pages
 on:
   push:
     branches:
-      - main  # Make sure this matches your default branch name
-  # Add workflow dispatch to run manually
+      - main
   workflow_dispatch:
 
 permissions:
@@ -17,23 +16,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Check Node version
-        run: node --version
-
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 22
           cache: 'npm'
 
-      - name: List directory contents
-        run: ls -la
-
       - name: Install dependencies
         run: |
           echo "Installing dependencies..."
           npm ci
-          echo "Dependencies installed"
 
       - name: Build project
         run: |
@@ -41,25 +33,25 @@ jobs:
           npm run build
           echo "Build completed"
 
-      - name: Prepare files
+      - name: Create deployment directory
         run: |
-          echo "Preparing files for deployment..."
-          touch out/.nojekyll
-          cp -r out/* .
-          rm -rf out
-          echo "Files prepared"
+          echo "Creating deployment directory..."
+          mkdir -p deployment
+          cp -r out/* deployment/
+          touch deployment/.nojekyll
 
-      - name: List files to be deployed
-        run: ls -la
+      - name: List deployment files
+        run: |
+          echo "Files to be deployed:"
+          ls -la deployment/
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: .
+          folder: deployment
           branch: gh-pages
           clean: true
 
       - name: Deployment status
         run: |
           echo "Deployment completed"
-          echo "Check the gh-pages branch for deployed files"
