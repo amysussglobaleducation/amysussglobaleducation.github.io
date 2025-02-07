@@ -15,8 +15,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -37,21 +35,11 @@ jobs:
           mkdir -p deployment
           cp -r out/* deployment/
           touch deployment/.nojekyll
-          rm -f deployment/*.txt
 
-      - name: Configure Git
+      - name: List deployment files
         run: |
-          git config --global user.name "GitHub Actions Bot"
-          git config --global user.email "actions@github.com"
-
-      - name: Clean gh-pages branch
-        run: |
-          git checkout --orphan gh-pages-temp
-          git rm -rf .
-          git commit --allow-empty -m "Initial clean state"
-          git branch -D gh-pages || true
-          git branch -m gh-pages
-          git push -f origin gh-pages
+          echo "Files to be deployed:"
+          ls -la deployment/
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
@@ -59,13 +47,14 @@ jobs:
           folder: deployment
           branch: gh-pages
           clean: true
-          force: true
           clean-exclude: |
             .nojekyll
+          force: true
 
       - name: Verify deployment
+        if: success()
         run: |
           git fetch
-          git checkout gh-pages
-          echo "Files in gh-pages branch:"
+          git checkout gh-pages || echo "Could not checkout gh-pages"
+          echo "Current directory contents:"
           ls -la
