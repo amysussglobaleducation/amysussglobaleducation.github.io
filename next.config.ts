@@ -7,8 +7,8 @@ const nextConfig: NextConfig = {
      unoptimized: true
    },
    // Remove the dot from basePath
-   basePath: process.env.NODE_ENV === 'production' ? '/ramratangupta.github.io' : '',
-   assetPrefix: process.env.NODE_ENV === 'production' ? '/ramratangupta.github.io' : '',
+   basePath: process.env.NODE_ENV === 'production' ? '/' : '',
+   assetPrefix: process.env.NODE_ENV === 'production' ? '/' : '',
    trailingSlash: true,
 };
 
