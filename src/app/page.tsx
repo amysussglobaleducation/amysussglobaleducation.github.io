@@ -33,7 +33,7 @@ export default function Home() {
         </div>
         <div className="col content">
           
-        <img src="your_door_to_top_100_universities.jpeg" alt="Career counselling & mentoring for top 100 colleges worldwide"/>
+        <img src="/your_door_to_top_100_universities.jpeg" alt="Career counselling & mentoring for top 100 colleges worldwide"/>
         </div>
 
       </div>

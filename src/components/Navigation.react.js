@@ -13,7 +13,7 @@ const Navigation = () => {
     <header id="header" className={`header d-flex align-items-center sticky-top ${isMobileNavOpen ? 'mobile-nav-active' : ''}`}>
       <div className="container-fluid container-xl position-relative d-flex align-items-center">
         <Link href="/" className="logo d-flex align-items-center me-auto">
-          <img src="assets/img/logo.png" alt="Amysuss Global Education" />
+          <img src="/assets/img/logo.png" alt="Amysuss Global Education" />
           <h1 className="sitename">Amysuss Global Education</h1>
         </Link>
 
