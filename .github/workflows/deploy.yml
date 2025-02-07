@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Important: Fetch all history for proper cleanup
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -24,20 +26,35 @@ jobs:
 
       - name: Install dependencies
         run: |
-          echo "Installing dependencies..."
           npm ci
 
-      - name: Starting build...
-        run: npm run build
-
-      - name: Creating deployment directory...
+      - name: Build project
         run: |
+          npm run build
+
+      - name: Prepare deployment
+        run: |
+          # Create clean deployment directory
           mkdir -p deployment
+          # Copy only necessary files
           cp -r out/* deployment/
+          
+          # Create .nojekyll
           touch deployment/.nojekyll
 
-      - name: Files to be deployed
-        run: ls -la deployment/
+      - name: List deployment files
+        run: |
+          echo "Files to be deployed:"
+          ls -la deployment/
+
+      - name: Clean gh-pages branch
+        run: |
+          git checkout --orphan gh-pages-temp
+          git rm -rf .
+          git commit --allow-empty -m "Initial clean state"
+          git branch -D gh-pages || true
+          git branch -m gh-pages
+          git push -f origin gh-pages
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
@@ -46,6 +63,12 @@ jobs:
           branch: gh-pages
           clean: true
           force: true
+          clean-exclude: |
+            .nojekyll
 
-      - name: Deployment completed
-        run: echo "Deployment completed"
+      - name: Verify deployment
+        run: |
+          echo "Verifying deployment..."
+          git checkout gh-pages
+          echo "Files in gh-pages branch:"
+          ls -la
