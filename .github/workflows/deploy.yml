@@ -1,43 +1,46 @@
-name: Deploy Next.js to GitHub Pages
+name: Deploy Next.js site to Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: 22
-          cache: npm
-
+          cache: 'npm'
+      
       - name: Install dependencies
-        run: |
-          npm ci
-
-      - name: Build project
-        run: |
-          npm run build
-
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+        run: npm ci
+      
+      - name: Build
+        run: npm run build
+        
+      - name: Create .nojekyll file
+        run: touch ./out/.nojekyll
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          folder: out           # Deploy the out directory directly
-          branch: gh-pages
-          clean: true          # Clean up existing files
-          single-commit: true  # Keep only the latest commit
+          path: ./out
 
-      - name: Verify deployment
-        run: |
-          echo "Deployment completed. Please check the gh-pages branch."
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
