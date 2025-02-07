@@ -2,13 +2,13 @@ import  "bootstrap/dist/css/bootstrap.min.css";
 import  "bootstrap-icons/font/bootstrap-icons.css";
 import "./globals.css";
 import Navigation from "../components/Navigation.react";
-import Footer from "../components/Footer.react";
-import { Open_Sans, Poppins, Raleway } from 'next/font/google';
+import Footer from "../components/Footer.react"
+import { Open_Sans, Poppins, Raleway } from 'next/font/google'
 
 const openSans = Open_Sans({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-open-sans',
+  variable: '--default-font',
   weight: ['300', '400', '500', '600', '700', '800'],
   style: ['normal', 'italic']
 })
@@ -16,7 +16,7 @@ const openSans = Open_Sans({
 const poppins = Poppins({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-poppins',
+  variable: '--nav-font',
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
   style: ['normal', 'italic']
 })
@@ -24,7 +24,7 @@ const poppins = Poppins({
 const raleway = Raleway({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-raleway',
+  variable: '--heading-font',
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
   style: ['normal', 'italic']
 })
@@ -35,7 +35,8 @@ export default function RootLayout({
 }>) {
   return (    
     <html lang="en">
-      <body className="index-page">
+      <body className={`index-page ${openSans.variable} ${poppins.variable} ${raleway.variable}`}
+      >
         <Navigation/>
         {children}
         <Footer/>
