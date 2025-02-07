@@ -20,30 +20,24 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 22
-          cache: 'npm'
+          cache: npm
 
       - name: Install dependencies
         run: |
           echo "Installing dependencies..."
           npm ci
 
-      - name: Build project
-        run: |
-          echo "Starting build..."
-          npm run build
-          echo "Build completed"
+      - name: Starting build...
+        run: npm run build
 
-      - name: Create deployment directory
+      - name: Creating deployment directory...
         run: |
-          echo "Creating deployment directory..."
           mkdir -p deployment
           cp -r out/* deployment/
           touch deployment/.nojekyll
 
-      - name: List deployment files
-        run: |
-          echo "Files to be deployed:"
-          ls -la deployment/
+      - name: Files to be deployed:
+        run: ls -la deployment/
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
@@ -51,7 +45,7 @@ jobs:
           folder: deployment
           branch: gh-pages
           clean: true
+          force: true
 
-      - name: Deployment status
-        run: |
-          echo "Deployment completed"
+      - name: Deployment completed
+        run: echo "Deployment completed"
