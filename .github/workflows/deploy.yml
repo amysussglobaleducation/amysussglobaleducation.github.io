@@ -30,31 +30,14 @@ jobs:
         run: |
           npm run build
 
-      - name: Prepare deployment
-        run: |
-          mkdir -p deployment
-          cp -r out/* deployment/
-          touch deployment/.nojekyll
-
-      - name: List deployment files
-        run: |
-          echo "Files to be deployed:"
-          ls -la deployment/
-
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: deployment
+          folder: out           # Deploy the out directory directly
           branch: gh-pages
-          clean: true
-          clean-exclude: |
-            .nojekyll
-          force: true
+          clean: true          # Clean up existing files
+          single-commit: true  # Keep only the latest commit
 
       - name: Verify deployment
-        if: success()
         run: |
-          git fetch
-          git checkout gh-pages || echo "Could not checkout gh-pages"
-          echo "Current directory contents:"
-          ls -la
+          echo "Deployment completed. Please check the gh-pages branch."
