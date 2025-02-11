@@ -18,8 +18,8 @@ const Navigation = () => {
     >
       <div className="container-fluid container-xl position-relative d-flex align-items-center">
         <Link href="/" className="logo d-flex align-items-center me-auto">
-          <img src="/assets/img/logo.png" alt="Amysuss Global Education" />
-          <h1 className="sitename">Amysuss Global Education</h1>
+          <img src="/assets/img/logo.png" alt="Amysuss Education Services" />
+          <h1 className="sitename">Amysuss Education Services</h1>
         </Link>
 
         <nav id="navmenu" className="navmenu">

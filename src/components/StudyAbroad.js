@@ -5,10 +5,10 @@ const StudyAbroad = () => {
       <div className="col-xl-4 col-lg-4 col-md-12 content">
         <ul>
           <li>
-            <i className="bi bi-check-circle"></i> <span>Profile Building</span>
+            <i className="bi bi-person-lines-fill"></i> <span>Profile Building</span>
           </li>
           <li>
-            <i className="bi bi-check-circle"></i>{" "}
+            <i className="bi bi-newspaper"></i>{" "}
             <span>Research paper writing & Publication</span>
           </li>
         </ul>
@@ -16,11 +16,11 @@ const StudyAbroad = () => {
       <div className="col-xl-4 col-lg-4 col-md-12 content">
         <ul>
           <li>
-            <i className="bi bi-check-circle"></i>{" "}
+            <i className="bi bi-pencil-square"></i>{" "}
             <span>Essay/SOP Writing</span>
           </li>
           <li>
-            <i className="bi bi-check-circle"></i>{" "}
+            <i className="bi bi-person-raised-hand"></i>{" "}
             <span>Application Support</span>
           </li>
         </ul>
@@ -28,10 +28,10 @@ const StudyAbroad = () => {
       <div className="col-xl-4 col-lg-4 col-md-12 content">
         <ul>
           <li>
-            <i className="bi bi-check-circle"></i>{" "}
+            <i className="bi bi-mortarboard-fill"></i>{" "}
             <span>Universities Shortlisting</span>
           </li>
-          <li><i className="bi bi-check-circle"></i> <span>Summer Program Listing India & Abroad</span></li>
+          <li><i className="bi bi-list-check"></i> <span>Summer Program India & Abroad</span></li>
         </ul>
       </div>
     </div>
