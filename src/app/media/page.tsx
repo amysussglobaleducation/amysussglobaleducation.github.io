@@ -29,7 +29,7 @@ export default function Home() {
       <div className="row ">
 
         <div className="col">
-        <h1>Media</h1>
+        <h2>Media</h2>
         </div>
       </div>
     </div>

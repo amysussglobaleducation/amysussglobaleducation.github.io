@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-const title = "Amysuss Global Education: Contact Us";
+import StudyinIndia from "../../components/StudyinIndia";
+const title = "Amysuss Global Education: Study in India";
 const description="Amysuss Education is founded by Mr. Ashutosh Srivastava, a seasoned professional with over 20 years of rich experience spanning financial services and the education sector. An MBA in Finance and Marketing, Ashutosh has been associated with renowned organizations such as Bajaj Allianz, Bergurrean Education, Safeducate, and CII MCC."
 export const metadata: Metadata = {
   title: title,
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: title, 
     description: description,
-    url: "https://www.amysussglobaleducation.com/contact-us/", // Replace with your actual URL
+    url: "https://www.amysussglobaleducation.com/study-in-india/", // Replace with your actual URL
     siteName: title,
     images: [
       {
@@ -25,21 +26,7 @@ export default function Home() {
   <section id="about" className="about section">
 
     <div className="container">
-
-      <div className="row ">
-        <div className="col content">
-          <h2>Contact Us</h2>
-          <iframe 
-                src="https://docs.google.com/forms/d/e/1FAIpQLSd9KUFYZQYVSMbjtYXKmVETL_1UczNpTKwGIstU8bL-4CJu_g/viewform?usp=header"
-                style={{
-                  width: '100%',
-                  height: '600px',
-                  border: 'none',
-                }}
-               
-              />
-        </div>
-      </div>
+    <StudyinIndia/>      
     </div>
   </section>
 </main>

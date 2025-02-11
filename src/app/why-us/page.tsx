@@ -28,7 +28,7 @@ export default function WhyUs() {
     <div className="container">
 
       <div className="row ">
-      <h1>Why Us</h1>
+      <h2>Why Us</h2>
         <div className="col content">
           <p>Amysuss Education is founded by <strong>Ashutosh Srivastava</strong>, a
             seasoned professional with over 20 years of rich experience spanning financial services and the education sector. An MBA in Finance and Marketing, Ashutosh has been associated with renowned organizations such as <strong>Bajaj Allianz, Bergurrean Education, Safeducate, and CII MCC</strong>.

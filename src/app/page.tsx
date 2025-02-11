@@ -1,4 +1,9 @@
 import type { Metadata } from "next";
+import dynamic from 'next/dynamic'
+const StudyinIndia = dynamic(() => import('../components/StudyinIndia'))
+const StudyAbroad = dynamic(() => import('../components/StudyAbroad'))
+const ForSchools = dynamic(() => import('../components/ForSchools'))
+
 const title = "Amysuss Global Education";
 import Link from "next/link";
 const description="Amysuss Education is founded by Mr. Ashutosh Srivastava, a seasoned professional with over 20 years of rich experience spanning financial services and the education sector. An MBA in Finance and Marketing, Ashutosh has been associated with renowned organizations such as Bajaj Allianz, Bergurrean Education, Safeducate, and CII MCC."
@@ -33,14 +38,15 @@ export default function Home() {
         <h1>Career counselling & mentoring for top 100 colleges worldwide</h1>
         <Link href="/contact-us" className=" btn btn-primary">Start Now</Link>
         </div>
-        <div className="col">
+        <div className="col p-0 text-center">
           
         <img src="/your_door_to_top_100_universities.jpeg" alt="Career counselling & mentoring for top 100 colleges worldwide"/>
         </div>
 
       </div>
-      
-
+      <StudyinIndia/>
+      <StudyAbroad/>
+      <ForSchools/>
     </div>
 
   </section>

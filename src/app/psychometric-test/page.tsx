@@ -29,7 +29,7 @@ export default function Home() {
       <div className="row ">
 
         <div className="col">
-        <h1>Psychometric Test</h1>
+        <h2>Psychometric Test</h2>
         </div>
       </div>
     </div>

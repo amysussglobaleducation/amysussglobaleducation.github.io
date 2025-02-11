@@ -29,22 +29,39 @@ const Navigation = () => {
                 Home
               </Link>
             </li>
-            <li>
+            <li className="dropdown">
               <Link
                 href="/our-services/"
-                className={pathname == "/our-services/" ? "active" : ""}
+                className={
+                  pathname == "/our-services/" || pathname == "/study-abroad/" || pathname == "/study-in-india/"
+                    ? "active"
+                    : ""
+                }
               >
-                Our Services
+                Our Services{" "}
+                <i className="bi bi-chevron-down toggle-dropdown"></i>
               </Link>
+              <ul>
+                <li>
+                  <Link
+                    href="/study-abroad/"
+                    className={pathname == "/study-abroad/" ? "active" : ""}
+                  >
+                    Study Abroad
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/study-in-india/"
+                    className={pathname == "/study-in-india/" ? "active" : ""}
+                  >
+                    Study in India
+                  </Link>
+                </li>
+              </ul>
             </li>
-            <li>
-              <Link
-                href="/study-abroad/"
-                className={pathname == "/study-abroad/" ? "active" : ""}
-              >
-                Study Abroad
-              </Link>
-            </li>
+            <li></li>
+
             <li>
               <Link
                 href="/psychometric-test/"
@@ -67,6 +84,14 @@ const Navigation = () => {
                 className={pathname == "/for-schools/" ? "active" : ""}
               >
                 For Schools
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/exam-notifications/"
+                className={pathname == "/exam-notifications/" ? "active" : ""}
+              >
+                Exam Notifications
               </Link>
             </li>
             <li>

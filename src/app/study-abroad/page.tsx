@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import StudyAbroad from "../../components/StudyAbroad";
 const title = "Amysuss Global Education: Study Abroad";
 const description="Amysuss Education is founded by Mr. Ashutosh Srivastava, a seasoned professional with over 20 years of rich experience spanning financial services and the education sector. An MBA in Finance and Marketing, Ashutosh has been associated with renowned organizations such as Bajaj Allianz, Bergurrean Education, Safeducate, and CII MCC."
 export const metadata: Metadata = {
@@ -25,13 +26,7 @@ export default function Home() {
   <section id="about" className="about section">
 
     <div className="container">
-
-      <div className="row ">
-
-        <div className="col">
-        <h1>Study Abroad</h1>
-        </div>
-      </div>
+    <StudyAbroad/>      
     </div>
   </section>
 </main>
