@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     siteName: title,
     images: [
       {
-        url: "https://your-website-url.com/your-image.jpg", // Replace with your image URL
+        url: "amysussglobaleducation.png", // Replace with your image URL
         alt: title,
       },
     ],
