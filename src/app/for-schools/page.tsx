@@ -11,10 +11,10 @@ export const metadata: Metadata = {
     title: title, 
     description: description,
     url: "https://www.amysussglobaleducation.com/for-schools/", // Replace with your actual URL
-    siteName: title,
+    siteName: title,type: "website",
     images: [
       {
-        url: "/amysussglobaleducation.png", // Replace with your image URL
+        url: "/amysussglobaleducation.png",type: "logo", // Replace with your image URL
         alt: title,
       },
     ],
