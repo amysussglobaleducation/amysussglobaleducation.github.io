@@ -8,7 +8,10 @@ const Navigation = () => {
   const pathname = usePathname();
   const toggleMobileNav = () => {
     setIsMobileNavOpen(!isMobileNavOpen);
-  };
+  }
+  const closeMobileNav = () => {
+    setIsMobileNavOpen(false);
+  }
   return (
     <header
       id="header"
@@ -17,7 +20,7 @@ const Navigation = () => {
       }`}
     >
       <div className="container-fluid container-xl position-relative d-flex align-items-center">
-        <Link href="/" className="logo d-flex align-items-center me-auto">
+        <Link onClick={closeMobileNav} href="/" className="logo d-flex align-items-center me-auto">
           <img src="/assets/img/logo.png" alt={SITE_CONFIG.NAME} />
           <h1 className="sitename">{SITE_CONFIG.NAME}</h1>
         </Link>
@@ -25,12 +28,12 @@ const Navigation = () => {
         <nav id="navmenu" className="navmenu">
           <ul>
             <li>
-              <Link href="/" className={pathname == "/" ? "active" : ""}>
+              <Link onClick={closeMobileNav} href="/" className={pathname == "/" ? "active" : ""}>
                 Home
               </Link>
             </li>
             <li className="dropdown">
-              <Link
+              <Link onClick={closeMobileNav}
                 href="/our-services/"
                 className={
                   pathname == "/our-services/" || pathname == "/study-abroad/" || pathname == "/study-in-india/"
@@ -43,7 +46,7 @@ const Navigation = () => {
               </Link>
               <ul>
                 <li>
-                  <Link
+                  <Link onClick={closeMobileNav}
                     href="/study-abroad/"
                     className={pathname == "/study-abroad/" ? "active" : ""}
                   >
@@ -51,7 +54,7 @@ const Navigation = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link
+                  <Link onClick={closeMobileNav}
                     href="/study-in-india/"
                     className={pathname == "/study-in-india/" ? "active" : ""}
                   >
@@ -63,7 +66,7 @@ const Navigation = () => {
             <li></li>
 
             <li>
-              <Link
+              <Link onClick={closeMobileNav}
                 href="/psychometric-test/"
                 className={pathname == "/psychometric-test/" ? "active" : ""}
               >
@@ -71,7 +74,7 @@ const Navigation = () => {
               </Link>
             </li>
             <li>
-              <Link
+              <Link onClick={closeMobileNav}
                 href="/why-us/"
                 className={pathname == "/why-us/" ? "active" : ""}
               >
@@ -79,7 +82,7 @@ const Navigation = () => {
               </Link>
             </li>
             <li>
-              <Link
+              <Link onClick={closeMobileNav}
                 href="/for-schools/"
                 className={pathname == "/for-schools/" ? "active" : ""}
               >
@@ -87,7 +90,7 @@ const Navigation = () => {
               </Link>
             </li>
             <li>
-              <Link
+              <Link onClick={closeMobileNav}
                 href="/exam-notifications/"
                 className={pathname == "/exam-notifications/" ? "active" : ""}
               >
@@ -95,7 +98,7 @@ const Navigation = () => {
               </Link>
             </li>
             <li>
-              <Link
+              <Link onClick={closeMobileNav}
                 href="/media/"
                 className={pathname == "/media/" ? "active" : ""}
               >
@@ -103,7 +106,7 @@ const Navigation = () => {
               </Link>
             </li>
             <li>
-              <Link
+              <Link onClick={closeMobileNav}
                 href="/contact-us/"
                 className={pathname == "/contact-us/" ? "active" : ""}
               >
@@ -119,7 +122,7 @@ const Navigation = () => {
           ></i>
         </nav>
 
-        <Link className="p-3" href={`https://wa.me/91${SOCIAL_LINKS.CONTACT.PHONE}?text=Hi`}>
+        <Link onClick={closeMobileNav} className="p-3" href={`https://wa.me/91${SOCIAL_LINKS.CONTACT.PHONE}?text=Hi`}>
           <i className="bi bi-whatsapp"></i>
         </Link>
       </div>
