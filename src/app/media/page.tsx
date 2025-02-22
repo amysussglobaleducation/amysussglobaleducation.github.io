@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-const title = "Amysuss Education Services: Media";
+import { SITE_CONFIG} from '@/constants';
+const title = SITE_CONFIG.NAME+" : Media";
 const description="Amysuss Education is founded by Mr. Ashutosh Srivastava, a seasoned professional with over 20 years of rich experience spanning financial services and the education sector. An MBA in Finance and Marketing, Ashutosh has been associated with renowned organizations such as Bajaj Allianz, Bergurrean Education, Safeducate, and CII MCC."
 export const metadata: Metadata = {
   title: title,

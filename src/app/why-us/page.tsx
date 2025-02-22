@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-const title = "Amysuss Education Services : Why Us";
+import { SITE_CONFIG} from '@/constants';
+const title = SITE_CONFIG.NAME+" : Why Us";
 const description="Amysuss Education is founded by Mr. Ashutosh Srivastava, a seasoned professional with over 20 years of rich experience spanning financial services and the education sector. An MBA in Finance and Marketing, Ashutosh has been associated with renowned organizations such as Bajaj Allianz, Bergurrean Education, Safeducate, and CII MCC."
 
 export const metadata: Metadata = {
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
     title: title, 
     description: description,
     url: "https://www.amysussglobaleducation.com/why-us", // Replace with your actual URL
-    siteName: "Amysuss Education Services",
+    siteName: title,
     images: [
       {
         url: "https://your-website-url.com/your-image.jpg", // Replace with your image URL

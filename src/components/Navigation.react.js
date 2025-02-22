@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-
+import { SITE_CONFIG,SOCIAL_LINKS} from '@/constants';
 const Navigation = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const pathname = usePathname();
@@ -18,8 +18,8 @@ const Navigation = () => {
     >
       <div className="container-fluid container-xl position-relative d-flex align-items-center">
         <Link href="/" className="logo d-flex align-items-center me-auto">
-          <img src="/assets/img/logo.png" alt="Amysuss Education Services" />
-          <h1 className="sitename">Amysuss Education Services</h1>
+          <img src="/assets/img/logo.png" alt={SITE_CONFIG.NAME} />
+          <h1 className="sitename">{SITE_CONFIG.NAME}</h1>
         </Link>
 
         <nav id="navmenu" className="navmenu">
@@ -119,7 +119,7 @@ const Navigation = () => {
           ></i>
         </nav>
 
-        <Link className="p-3" href="https://wa.me/919810241310?text=Hi">
+        <Link className="p-3" href={`https://wa.me/91${SOCIAL_LINKS.CONTACT.PHONE}?text=Hi`}>
           <i className="bi bi-whatsapp"></i>
         </Link>
       </div>
