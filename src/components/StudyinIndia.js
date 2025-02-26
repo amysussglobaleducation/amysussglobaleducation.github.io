@@ -5,11 +5,11 @@ const StudyinIndia = () => {
       <div className="col-xl-4 col-lg-4 col-md-12 content">
         <ul>
           <li>
-            <i className="bi bi-check-circle"></i>{" "}
+            <i className="bi bi-chat-quote"></i>
             <span>Career Counselling</span>
           </li>
           <li>
-            <i className="bi bi-check-circle"></i>{" "}
+            <i className="bi bi-list-task"></i>
             <span>Test Preparation Guidance</span>
           </li>
         </ul>
@@ -17,17 +17,17 @@ const StudyinIndia = () => {
       <div className="col-xl-4 col-lg-4 col-md-12 content">
         <ul>
           <li>
-            <i className="bi bi-check-circle"></i> <span>Stream Selection</span>
+            <i className="bi bi-mortarboard"></i> <span>Stream Selection</span>
           </li>
           <li>
-            <i className="bi bi-check-circle"></i> <span>Internship</span>
+            <i className="bi bi-lightbulb"></i> <span>Internship</span>
           </li>
         </ul>
       </div>
       <div className="col-xl-4 col-lg-4 col-md-12 content">
         <ul>
           <li>
-            <i className="bi bi-check-circle"></i>{" "}
+            <i className="bi bi-globe-central-south-asia"></i>
             <span>Study Tour India & Abroad</span>
           </li>
         </ul>
