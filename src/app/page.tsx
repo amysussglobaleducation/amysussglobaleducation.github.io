@@ -13,11 +13,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: SITE_CONFIG.NAME, 
     description: description,
-    url: "https://www.amysussglobaleducation.com", // Replace with your actual URL
+    url: SITE_CONFIG.LINK, // Replace with your actual URL
     siteName: SITE_CONFIG.NAME,
     images: [
       {
-        url: "https://amysussglobaleducation.github.io/amysussglobaleducation.png",type: "logo", // Replace with your image URL
+        url: SITE_CONFIG.LINK+"amysussglobaleducation.png",type: "logo", // Replace with your image URL
         alt: SITE_CONFIG.NAME,
       },
     ],

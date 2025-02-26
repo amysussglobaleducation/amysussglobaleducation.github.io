@@ -1,5 +1,6 @@
 export const SITE_CONFIG = {
     NAME: "Amysuss Education Services",
+    LINK: "https://amysussglobaleducation.github.io"
     
   } as const;
 

@@ -4,7 +4,7 @@ import "./globals.css";
 import Navigation from "../components/Navigation.react";
 import Footer from "../components/Footer.react"
 import { Open_Sans, Poppins, Raleway } from 'next/font/google'
-
+import { GoogleAnalytics } from '@next/third-parties/google'
 const openSans = Open_Sans({
   subsets: ['latin'],
   display: 'swap',
@@ -39,6 +39,7 @@ export default function RootLayout({
         <Navigation/>
         {children}
         <Footer/>
+        <GoogleAnalytics gaId="G-CQNKWP9CLG"/>
       </body>
     </html>
   );
