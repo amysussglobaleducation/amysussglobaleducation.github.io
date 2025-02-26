@@ -288,6 +288,10 @@ p{font-size: 1.2rem;line-height: 1.9;}
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Navmenu - Desktop */
+@media (min-width: 1000px) {
+
+  .h1, h1 {font-size: 4rem;}
+}
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
@@ -924,4 +928,3 @@ section,
 .about .content .read-more:hover i {
   margin-left: 10px;
 }
-.h1, h1 {font-size: 4rem;}
