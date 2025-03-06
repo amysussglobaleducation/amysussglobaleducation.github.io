@@ -1,6 +1,6 @@
 export const SITE_CONFIG = {
     NAME: "Amysuss Education Services",
-    LINK: "https://amysussglobaleducation.github.io"
+    LINK: "https://amysussglobaleducation.com"
     
   } as const;
 
@@ -10,7 +10,7 @@ export const SITE_CONFIG = {
     INSTAGRAM: process.env.NEXT_PUBLIC_INSTAGRAM_URL || "#",
     LINKEDIN: process.env.NEXT_PUBLIC_LINKEDIN_URL || "#",
     CONTACT: {
-        EMAIL: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@amysuss.com",
+        EMAIL: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "ashutosh@amysussglobaleducation.com",
         PHONE: "9810241310",
       }
   } as const;
