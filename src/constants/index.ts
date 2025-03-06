@@ -7,7 +7,7 @@ export const SITE_CONFIG = {
   export const SOCIAL_LINKS = {
     FACEBOOK: process.env.NEXT_PUBLIC_FACEBOOK_URL || "#",
     TWITTER: process.env.NEXT_PUBLIC_TWITTER_URL || "#",
-    INSTAGRAM: process.env.NEXT_PUBLIC_INSTAGRAM_URL || "#",
+    INSTAGRAM: "https://www.instagram.com/admissionwithamysuss/",
     LINKEDIN: process.env.NEXT_PUBLIC_LINKEDIN_URL || "#",
     CONTACT: {
         EMAIL: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "ashutosh@amysussglobaleducation.com",

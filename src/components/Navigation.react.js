@@ -5,12 +5,17 @@ import Link from "next/link";
 import { SITE_CONFIG,SOCIAL_LINKS} from '@/constants';
 const Navigation = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const pathname = usePathname();
   const toggleMobileNav = () => {
     setIsMobileNavOpen(!isMobileNavOpen);
   }
   const closeMobileNav = () => {
     setIsMobileNavOpen(false);
+    setIsDropdownOpen(false);
+  }
+  const toggleDropdownOpen = () => {
+    setIsDropdownOpen(!isDropdownOpen);
   }
   return (
     <header
@@ -33,10 +38,10 @@ const Navigation = () => {
               </Link>
             </li>
             <li className="dropdown">
-              <Link onClick={closeMobileNav}
+              <Link onClick={toggleDropdownOpen}
                 href="/our-services/"
                 className={
-                  pathname == "/our-services/" || pathname == "/study-abroad/" || pathname == "/study-in-india/"
+                  (isMobileNavOpen == false && (pathname ==  "/our-services/" || pathname == "/study-abroad/" || pathname == "/study-in-india/")) || isDropdownOpen
                     ? "active"
                     : ""
                 }
@@ -44,7 +49,7 @@ const Navigation = () => {
                 Our Services{" "}
                 <i className="bi bi-chevron-down toggle-dropdown"></i>
               </Link>
-              <ul>
+              <ul className={isDropdownOpen?"dropdown-active":""}>
                 <li>
                   <Link onClick={closeMobileNav}
                     href="/study-abroad/"
@@ -63,7 +68,6 @@ const Navigation = () => {
                 </li>
               </ul>
             </li>
-            <li></li>
 
             <li>
               <Link onClick={closeMobileNav}

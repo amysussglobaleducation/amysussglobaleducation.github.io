@@ -34,7 +34,7 @@ export default function Home() {
       <div className="row ">
 
         <div className="col p-3">
-        <h1>Career counselling & mentoring for top 100 colleges worldwide</h1>
+        <h2 className="homepage-subhead">Career counselling & mentoring for top 100 colleges worldwide</h2>
         <Link href="/contact-us" className=" btn btn-primary">Start Now</Link>
         </div>
         <div className="col p-0 text-center">

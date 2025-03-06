@@ -86,59 +86,6 @@ h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
-
-/* PHP Email Form Messages
-------------------------------*/
-.php-email-form .error-message {
-  display: none;
-  background: #df1529;
-  color: #ffffff;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-p{font-size: 1.2rem;line-height: 1.9;}
-.php-email-form .sent-message {
-  display: none;
-  color: #ffffff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .loading {
-  display: none;
-  background: var(--surface-color);
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-}
-
-.php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid var(--accent-color);
-  border-top-color: var(--surface-color);
-  animation: php-email-form-loading 1s linear infinite;
-}
-
-@keyframes php-email-form-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 /* Pulsating Play Button
 ------------------------------*/
 .pulsating-play-btn {
@@ -290,7 +237,7 @@ p{font-size: 1.2rem;line-height: 1.9;}
 /* Navmenu - Desktop */
 @media (min-width: 1000px) {
 
-  .h1, h1 {font-size: 4rem;}
+  .homepage-subhead {font-size: 4rem;}
 }
 @media (min-width: 1200px) {
   .navmenu {
@@ -896,35 +843,4 @@ section,
 
 .about .content p:last-child {
   margin-bottom: 0;
-}
-
-.about .content .read-more {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  font-family: var(--heading-font);
-  font-weight: 500;
-  font-size: 15px;
-  letter-spacing: 1px;
-  padding: 10px 24px 12px 24px;
-  border-radius: 50px;
-  transition: 0.3s;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.about .content .read-more i {
-  font-size: 18px;
-  margin-left: 5px;
-  line-height: 0;
-  transition: 0.3s;
-}
-
-.about .content .read-more:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
-  padding-right: 19px;
-}
-
-.about .content .read-more:hover i {
-  margin-left: 10px;
 }

@@ -35,7 +35,7 @@ const Footer = () => {
         <div className="container footer-top">
           <div className="row gy-4">
             <div className="col footer-about">
-              <a href="index.html" className="logo d-flex align-items-center">
+              <a href="/" className="logo d-flex align-items-center">
                 <span className="sitename">{SITE_CONFIG.NAME}</span>
               </a>
               <div className="footer-contact pt-3">
@@ -57,10 +57,15 @@ const Footer = () => {
                 </p>
               </div>
               <div className="social-links d-flex mt-4">
-                <a
+                <a target="_blank"
                   href={`https://wa.me/91${SOCIAL_LINKS.CONTACT.PHONE}?text=Hi`}
                 >
                   <i className="bi bi-whatsapp"></i>
+                </a>
+                <a target="_blank"
+                  href={SOCIAL_LINKS.INSTAGRAM}
+                >
+                  <i className="bi bi-instagram"></i>
                 </a>
               </div>
             </div>
