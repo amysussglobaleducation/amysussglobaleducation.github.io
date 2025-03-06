@@ -1,6 +1,7 @@
 "use client"; // Important for Next.js 13+ client components
 import { useEffect, useState } from "react";
 import { SITE_CONFIG, SOCIAL_LINKS } from "@/constants";
+import Link from "next/link";
 const Footer = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -35,9 +36,12 @@ const Footer = () => {
         <div className="container footer-top">
           <div className="row gy-4">
             <div className="col footer-about">
-              <a href="/" className="logo d-flex align-items-center">
+              <Link
+                href="/"
+                className="logo d-flex align-items-center"
+              >
                 <span className="sitename">{SITE_CONFIG.NAME}</span>
-              </a>
+              </Link>
               <div className="footer-contact pt-3">
                 <p>
                   Innov8 CP2, 44, Backary Portion, 2nd floor, Regal Building
@@ -57,14 +61,13 @@ const Footer = () => {
                 </p>
               </div>
               <div className="social-links d-flex mt-4">
-                <a target="_blank"
+                <a
+                  target="_blank"
                   href={`https://wa.me/91${SOCIAL_LINKS.CONTACT.PHONE}?text=Hi`}
                 >
                   <i className="bi bi-whatsapp"></i>
                 </a>
-                <a target="_blank"
-                  href={SOCIAL_LINKS.INSTAGRAM}
-                >
+                <a target="_blank" href={SOCIAL_LINKS.INSTAGRAM}>
                   <i className="bi bi-instagram"></i>
                 </a>
               </div>
