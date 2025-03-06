@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://amysussglobaleducation.com/
+
+# Sitemaps
+Sitemap: https://amysussglobaleducation.com/sitemap.xml
