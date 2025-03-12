@@ -10,6 +10,10 @@ export const metadata: Metadata = {
   title: SITE_CONFIG.NAME,
   description: description,
   keywords:"Career Counseling, Education Consulting, Study Abroad, Overseas Education, University Admissions, Test Preparation, Psychometric Testing, SOP Writing, Essay Writing, Internship Placement, Educational Guidance, Student Mentorship, School Workshops, Teachers Training, Location-Based Keywords, Study Abroad Consultants, Education Consultants, University Admissions, Psychometric Test for Students, Career Counseling for High School Students, Career Counseling for College Students, MBA Admission Consulting, IELTS/TOEFL Preparation, SOP Writing for University Applications, Internship Opportunities Abroad, Summer Programs for Students, Ashutosh Srivastava Education Consultant, Ashutosh Srivastava Career Counselor, Amysuss Education Services, Finding the right university for my career goals",
+  metadataBase: new URL(SITE_CONFIG.LINK), // Add this line
+  alternates: {
+    canonical: '/', // Add this line
+  },
   openGraph: {
     title: SITE_CONFIG.NAME, 
     description: description,

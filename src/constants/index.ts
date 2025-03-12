@@ -5,7 +5,7 @@ export const SITE_CONFIG = {
   } as const;
 
   export const SOCIAL_LINKS = {
-    FACEBOOK: process.env.NEXT_PUBLIC_FACEBOOK_URL || "#",
+    FACEBOOK: "https://www.facebook.com/profile.php?id=61573581322845",
     TWITTER: process.env.NEXT_PUBLIC_TWITTER_URL || "#",
     INSTAGRAM: "https://www.instagram.com/admissionwithamysuss/",
     LINKEDIN: process.env.NEXT_PUBLIC_LINKEDIN_URL || "#",

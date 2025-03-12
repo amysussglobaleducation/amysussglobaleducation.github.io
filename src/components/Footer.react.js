@@ -70,6 +70,9 @@ const Footer = () => {
                 <a target="_blank" href={SOCIAL_LINKS.INSTAGRAM}>
                   <i className="bi bi-instagram"></i>
                 </a>
+                <a target="_blank" href={SOCIAL_LINKS.FACEBOOK}>
+                  <i className="bi bi-facebook"></i>
+                </a>
               </div>
             </div>
           </div>
