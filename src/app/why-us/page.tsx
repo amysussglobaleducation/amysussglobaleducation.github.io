@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     siteName: title,type: "website",
     images: [
       {
-        url: SITE_CONFIG.LINK+"amysussglobaleducation.png",type: "logo", // Replace with your image URL
+        url: SITE_CONFIG.LINK+"/amysussglobaleducation.png",type: "logo", // Replace with your image URL
         alt: "Amysuss Education Services Logo",
       },
     ],
